@@ -49,6 +49,17 @@ function setVideoSubtitles(){
 				}
 
 			};
+			
+			window.addEventListener("keyup", (e) => {
+				//console.log(e)
+				if (e.key == " " && e.code == "Space") {
+					if (!video.paused) {
+						video.pause();
+					} else {
+						video.play();
+					}
+				} 
+			});
 
 		}
 		catch(error){}
